@@ -31,9 +31,12 @@ const ListOfPhotos = () => {
       {loading
         ? [1, 2, 3].map((id) => <PhotoLoader key={id} />)
         : photos.map((photo) => {
-            if (authenticated && user.favorites) {
+            if (authenticated) {
+              if (user.favorites.find((favorite) => favorite.id === photo.id)) {
+                liked = true;
+              }
             }
-            return <PhotoCard key={photo.id} {...photo} />;
+            return <PhotoCard key={photo.id} {...photo} liked={liked} />;
           })}
     </ul>
   );
