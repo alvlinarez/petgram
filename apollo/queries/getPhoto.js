@@ -11,12 +11,10 @@ export const GET_PHOTO = gql`
         cover
       }
       src
-      user {
-        id
-        name
-        email
-      }
       likes
+      usersLiked {
+        id
+      }
     }
   }
 `;

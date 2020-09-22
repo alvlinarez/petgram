@@ -10,15 +10,8 @@ export const LIKE_PHOTO = gql`
         cover
       }
       src
-      user {
+      usersLiked {
         id
-        name
-        email
-        favorites {
-          id
-          src
-          likes
-        }
       }
       likes
     }

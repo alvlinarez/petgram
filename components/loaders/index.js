@@ -2,20 +2,18 @@ import React from 'react';
 import { LoaderRoller } from '../../styles/components/loaders';
 import ContentLoader from 'react-content-loader';
 
-export const CategoryLoader = () => {
-  return (
-    <LoaderRoller>
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-    </LoaderRoller>
-  );
-};
+export const CategoryLoader = () => (
+  <LoaderRoller>
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </LoaderRoller>
+);
 
 export const PhotoLoader = () => (
   <ContentLoader

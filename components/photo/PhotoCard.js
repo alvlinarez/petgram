@@ -26,7 +26,7 @@ const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
             </a>
           </Link>
 
-          <FavButton liked={liked} likes={likes} />
+          <FavButton id={id} liked={liked} likes={likes} />
         </>
       )}
     </Article>

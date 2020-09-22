@@ -18,13 +18,13 @@ import fetch from 'node-fetch';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000/graphql',
-  fetch
+  fetch,
+  credentials: 'include'
 });
 
 const client = new ApolloClient({
   connectToDevTools: true,
   cache: new InMemoryCache(),
-  credentials: true,
   link: httpLink
 });
 

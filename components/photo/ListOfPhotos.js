@@ -5,6 +5,8 @@ import Error from '../Error';
 import { PhotoLoader } from '../loaders';
 import PhotoCard from './PhotoCard';
 import { AuthContext } from '../../context/auth/AuthContext';
+import { assignUserLike } from '../../utils/assignUserLike';
+import { ListPhotos } from '../../styles/components/photo/ListOfPhotos';
 
 const ListOfPhotos = () => {
   // Apollo query
@@ -14,12 +16,13 @@ const ListOfPhotos = () => {
   const authContext = useContext(AuthContext);
   const { authenticated, user } = authContext;
 
-  // If user already liked the photo
-  let liked = false;
-
   let photos = [];
   if (!loading && data) {
     photos = data.getPhotos;
+    // Assign likes to photos
+    if (authenticated) {
+      photos = assignUserLike(photos, user);
+    }
   }
 
   if (error) {
@@ -27,18 +30,13 @@ const ListOfPhotos = () => {
   }
 
   return (
-    <ul>
+    <ListPhotos>
       {loading
         ? [1, 2, 3].map((id) => <PhotoLoader key={id} />)
         : photos.map((photo) => {
-            if (authenticated) {
-              if (user.favorites.find((favorite) => favorite.id === photo.id)) {
-                liked = true;
-              }
-            }
-            return <PhotoCard key={photo.id} {...photo} liked={liked} />;
+            return <PhotoCard key={photo.id} {...photo} />;
           })}
-    </ul>
+    </ListPhotos>
   );
 };
 

@@ -6,11 +6,6 @@ export const GET_USER = gql`
       id
       name
       email
-      favorites {
-        id
-        src
-        likes
-      }
     }
   }
 `;

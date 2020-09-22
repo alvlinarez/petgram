@@ -11,10 +11,8 @@ export const GET_PHOTOS_BY_CATEGORY = gql`
         cover
       }
       src
-      user {
+      usersLiked {
         id
-        name
-        email
       }
       likes
     }
