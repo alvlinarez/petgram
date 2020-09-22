@@ -9,7 +9,7 @@ export const routes = [
     type: 1
   },
   {
-    path: '/pet/[id]',
+    path: '/category/[id]',
     type: 1
   },
   {

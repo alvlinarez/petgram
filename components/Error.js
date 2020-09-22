@@ -1,7 +1,12 @@
 import React from 'react';
+import Layout from './layout/Layout';
 
-const Error = (props) => {
-  return <h1>Error</h1>;
+const Error = () => {
+  return (
+    <Layout>
+      <h1>An unexpected error happened!</h1>
+    </Layout>
+  );
 };
 
 export default Error;

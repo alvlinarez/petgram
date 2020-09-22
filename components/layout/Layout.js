@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { Div, Subtitle, Title } from '../../styles/components/layout/Layout';
 import Logo from './Logo';
+import Navbar from './Navbar';
 
 const Layout = ({ title, subtitle, children }) => {
   return (
@@ -35,6 +36,8 @@ const Layout = ({ title, subtitle, children }) => {
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         {children}
       </Div>
+
+      <Navbar />
     </>
   );
 };

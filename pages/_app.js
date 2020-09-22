@@ -1,5 +1,7 @@
 import React from 'react';
 import App from 'next/app';
+import { ApolloProvider } from '@apollo/client';
+import client from '../apollo/config';
 import GlobalStyles from '../styles/GlobalStyles';
 import { AuthState } from '../context/auth/AuthState';
 import Error from '../components/Error';
@@ -15,10 +17,12 @@ function MyApp({ Component, pageProps }) {
   }
   return (
     <>
-      <AuthState user={user}>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </AuthState>
+      <ApolloProvider client={client}>
+        <AuthState user={user}>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </AuthState>
+      </ApolloProvider>
     </>
   );
 }

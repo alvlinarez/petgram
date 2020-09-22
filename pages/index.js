@@ -1,5 +1,11 @@
 import React from 'react';
+import Layout from '../components/layout/Layout';
+import ListOfCategories from '../components/category/ListOfCategories';
 
 export default function Home() {
-  return <h1>Hello World</h1>;
+  return (
+    <Layout>
+      <ListOfCategories />
+    </Layout>
+  );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
+import Layout from '../components/layout/Layout';
 
 const User = () => {
-  return <div></div>;
+  return <Layout></Layout>;
 };
 
 export default User;
