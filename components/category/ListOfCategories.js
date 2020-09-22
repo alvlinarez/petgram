@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Item, List } from '../../styles/components/category/ListOfCategories';
-import CategoryLoader from './CategoryLoader';
+import { CategoryLoader } from '../loaders';
 import Category from './Category';
 import { useQuery } from '@apollo/client';
 import { GET_CATEGORIES } from '../../apollo/queries/getCategories';

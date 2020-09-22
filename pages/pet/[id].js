@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Detail = () => {
+const Pet = () => {
   return <div></div>;
 };
 
-export default Detail;
+export default Pet;
