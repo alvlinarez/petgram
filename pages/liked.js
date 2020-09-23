@@ -7,11 +7,13 @@ import { GET_LIKED_PHOTOS } from '../apollo/queries/getLikedPhotos';
 import { ImageGrid } from '../components/loaders';
 import { Grid, LinkPhoto, Image } from '../styles/pages/liked';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Liked = () => {
+  const router = useRouter();
   // Get user info
   const authContext = useContext(AuthContext);
-  const { authenticated, user } = authContext;
+  const { authenticated } = authContext;
 
   // Query to get photosByCategory
   const { data, loading, error } = useQuery(GET_LIKED_PHOTOS);
@@ -19,6 +21,10 @@ const Liked = () => {
   let photos = [];
   if (!loading && data) {
     photos = data.getLikedPhotos;
+  }
+
+  if (!authenticated) {
+    router.push('/signin');
   }
 
   if (error) {

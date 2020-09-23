@@ -72,7 +72,7 @@ export const AuthState = ({ user = {}, children }) => {
     }
   };
 
-  const signOut = async (router) => {
+  const signOut = async () => {
     dispatch({
       type: AUTH_LOADING
     });
@@ -82,8 +82,6 @@ export const AuthState = ({ user = {}, children }) => {
         type: SIGN_OUT_SUCCESS,
         payload: data.message
       });
-      // redirect when user is signed out
-      router.push('/signin');
     } catch (e) {
       dispatch({
         type: SIGN_OUT_ERROR,
