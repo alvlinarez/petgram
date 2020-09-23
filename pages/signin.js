@@ -14,6 +14,10 @@ import {
 import Link from 'next/link';
 import { AuthContext } from '../context/auth/AuthContext';
 import { useRouter } from 'next/router';
+import {
+  SocialMediaContainer,
+  SocialMediaIconContainer
+} from '../styles/pages/signin';
 
 const SignIn = () => {
   const authContext = useContext(AuthContext);
@@ -89,6 +93,20 @@ const SignIn = () => {
           </Link>
         </AuthLink>
       </Form>
+
+      <SocialMediaContainer>
+        <SocialMediaIconContainer>
+          <img src="/static/img/google-icon.png" alt="Google Icon" />
+          <a href="/auth/google">Sign In with Google</a>
+        </SocialMediaIconContainer>
+      </SocialMediaContainer>
+
+      <SocialMediaContainer>
+        <SocialMediaIconContainer>
+          <img src="/static/img/facebook-icon.png" alt="Facebook Icon" />
+          <a href="/auth/facebook">Sign In with Facebook</a>
+        </SocialMediaIconContainer>
+      </SocialMediaContainer>
     </Layout>
   );
 };
