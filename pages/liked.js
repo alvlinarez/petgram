@@ -16,7 +16,9 @@ const Liked = () => {
   const { authenticated } = authContext;
 
   // Query to get photosByCategory
-  const { data, loading, error } = useQuery(GET_LIKED_PHOTOS);
+  const { data, loading, error } = useQuery(GET_LIKED_PHOTOS, {
+    fetchPolicy: 'network-only'
+  });
 
   let photos = [];
   if (!loading && data) {

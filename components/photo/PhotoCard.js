@@ -9,7 +9,7 @@ import FavButton from './FavButton';
 import useNearScreen from '../../hooks/useNearScreen';
 
 const DEFAULT_IMAGE =
-  'https://res.cloudinary.com/midudev/image/upload/w_300/q_80/v1560262103/dogs.png';
+  'https://aws-alg-drive.s3.amazonaws.com/petgram/photos/dog1.jpg';
 
 const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
   // Show the photocard while scrolling

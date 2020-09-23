@@ -5,7 +5,7 @@ import { Svg } from '../../styles/components/layout/Logo';
 const Logo = (props) => {
   return (
     <Link href="/">
-      <a>
+      <a aria-label="Logo">
         <Svg
           width={387.923}
           height={120.81}

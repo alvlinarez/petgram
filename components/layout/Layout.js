@@ -25,7 +25,7 @@ const Layout = ({ title, subtitle, children }) => {
           />
         )}
 
-        <link rel="preconnect" href="http://localhost:4000" />
+        <link rel="preconnect" href="https://aws-alg-drive.s3.amazonaws.com" />
         <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16" />
       </Head>
 
