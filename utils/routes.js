@@ -25,7 +25,7 @@ export const routes = [
     type: 2
   },
   {
-    path: '/favs',
+    path: '/liked',
     type: 3
   },
   {

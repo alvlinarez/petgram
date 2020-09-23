@@ -15,8 +15,8 @@ const Navbar = () => {
           <MdHome size={SIZE} />
         </LinkNavbar>
       </Link>
-      <Link href="/favs">
-        <LinkNavbar current={router.pathname === '/favs'}>
+      <Link href="/liked">
+        <LinkNavbar current={router.pathname === '/liked'}>
           <MdFavoriteBorder size={SIZE} />
         </LinkNavbar>
       </Link>
