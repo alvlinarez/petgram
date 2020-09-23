@@ -45,9 +45,7 @@ const Pet = () => {
   }
 
   return (
-    <Layout title={`Photo ${id}`}>
-      {loading ? <PhotoLoader /> : <PhotoCard {...photo} />}
-    </Layout>
+    <Layout>{loading ? <PhotoLoader /> : <PhotoCard {...photo} />}</Layout>
   );
 };
 
