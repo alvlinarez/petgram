@@ -17,7 +17,8 @@ import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import fetch from 'node-fetch';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  //uri: 'http://localhost:4000/graphql',
+  uri: 'https://petgram.alvlinarez.dev/petgram-server/graphql',
   fetch,
   credentials: 'include'
 });
