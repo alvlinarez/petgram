@@ -9,6 +9,8 @@ Some features used:
 
 [See app in production](https://petgram.alvlinarez.dev)
 
+[See api](https://github.com/alvlinarez/petgram-server)
+
 ## Scripts
 
 * `npm install` to install dependencies
